@@ -86,7 +86,10 @@ export function Layout( { tabs = [], activeSection }: LayoutProps ) {
 										ref={ toggleRef }
 										isTransparent={ false }
 									/>
-									<SidebarContent routeKey={ name }>
+									<SidebarContent
+										routeKey={ name }
+										shouldAnimate={ false }
+									>
 										{ areas.sidebar }
 									</SidebarContent>
 								</motion.div>
