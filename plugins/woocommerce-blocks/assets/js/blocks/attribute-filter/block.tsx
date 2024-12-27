@@ -549,7 +549,7 @@ const AttributeFilterBlock = ( {
 					<>
 						<FormTokenField
 							key={ remountKey }
-							label={ attributeObject.label as string }
+							label={ attributeObject.label }
 							className={ clsx( {
 								'single-selection': ! multiple,
 								'is-loading': isLoading,
@@ -671,6 +671,11 @@ const AttributeFilterBlock = ( {
 						isLoading={ isLoading }
 						disabled={ getIsApplyButtonDisabled() }
 						onClick={ () => onSubmit( checked ) }
+						screenReaderLabel={ sprintf(
+							/* translators: %s is the attribute label */
+							__( 'Apply attribute filter: %s', 'woocommerce' ),
+							attributeObject.label
+						) }
 					/>
 				) }
 			</div>
